@@ -14,6 +14,7 @@ public class SumOfNumbersStreams {
 
         System.out.println(integersStrings.stream().collect(Collectors.reducing(0, (subtotal, element) -> subtotal + element)));
 
-
+        System.out.println(integersStrings.stream().collect(Collectors.groupingBy(integer -> integer % 2, Collectors.summingInt(intt -> Integer.valueOf(intt)))));
+        System.out.println(integersStrings.stream().collect(Collectors.groupingBy(integer -> integer % 2, Collectors.filtering(o -> Integer.valueOf(o).intValue() > 2, Collectors.counting()))));
     }
 }

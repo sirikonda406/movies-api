@@ -9,11 +9,12 @@ import static java.util.stream.Collectors.*;
 public class SequenceIdentification {
 
     public static void main(String[] args) {
-        String input = "1234345346544446667";
+        String input = "123456";
 
         Map<Object, Long> bits = Arrays.stream(input.split("")).collect(groupingBy(s -> s, counting()));
 
         System.out.println(Arrays.stream(input.split("")).collect(maxBy(Comparator.comparing(s -> s))));
+        System.out.println(Arrays.stream(input.split("")).collect(summingLong(value -> Integer.valueOf(value))));
     }
 
    /* public static void main(String[] args) {
