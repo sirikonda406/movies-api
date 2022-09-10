@@ -1,4 +1,4 @@
-package com.mahesh.movies.api.moviesapi.singleton;
+package com.mahesh.movies.api.moviesapi.designPatterns.singletonPattern;
 
 public class SingletonTest {
     public static void main(String[] args) throws IllegalAccessException, CloneNotSupportedException {

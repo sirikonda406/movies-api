@@ -1,4 +1,4 @@
-package com.mahesh.movies.api.moviesapi.singleton;
+package com.mahesh.movies.api.moviesapi.designPatterns.singletonPattern;
 
 import java.io.ObjectStreamException;
 import java.io.Serializable;
