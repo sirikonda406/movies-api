@@ -1,4 +1,4 @@
-package com.mahesh.movies.api.moviesapi.designPatterns;
+package com.mahesh.movies.api.moviesapi.designPatterns.builderPattern;
 
 import com.mahesh.movies.api.moviesapi.designPatterns.model.Account;
 
