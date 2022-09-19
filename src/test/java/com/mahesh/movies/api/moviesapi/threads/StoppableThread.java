@@ -6,10 +6,7 @@ public class StoppableThread {
 
         @Override
         public void run() {
-            while (!isThreadStopRequest()) {
-                sleepThread(200);
-                System.out.println("executing thread ........");
-            }
+
             System.out.println("executing thread stopped !!!!!!!");
         }
 
