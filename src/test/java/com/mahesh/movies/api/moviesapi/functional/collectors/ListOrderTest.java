@@ -13,7 +13,7 @@ import static java.util.stream.Collectors.toList;
 
 public class ListOrderTest {
 
-    @Test
+   // @Test
     public void compareTriplets(List<Integer> aliceList, List<Integer> bobList) {
         int alicePoints = 0;
         int bobPoints = 0;
