@@ -13,5 +13,5 @@ import java.beans.ConstructorProperties;
 public class ApplicationProperties {
     private String movieName;
     private String movieGenre;
-    private String budget;
+    private Long budget;
 }

@@ -21,6 +21,8 @@ public class MoviesController {
     @GetMapping(path = "/movies", produces = "application/json")
     public ResponseEntity<MovieDto> rtrvMovies() {
         System.out.println("application properties" + applicationProperties.getMovieGenre());
+        System.out.println("application properties" + applicationProperties.getBudget());
+
 
         MovieDto movieDto = MovieDto.builder().movieId("1").movieDescription("Avatar").movieGenre("thriller").movieName("Avatar").build();
         Set<ConstraintViolation<MovieDto>> validationFactory = Validation.buildDefaultValidatorFactory().getValidator().validate(movieDto, MovieDto.class);
