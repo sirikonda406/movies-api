@@ -1,22 +1,45 @@
+import org.gradle.api.tasks.testing.logging.TestLogEvent
+
 plugins {
-    id 'org.springframework.boot' version '2.7.3'
+    id 'org.springframework.boot' version '3.1.4'
     id 'io.spring.dependency-management' version '1.0.13.RELEASE'
     id 'java'
 }
 
+
+sourceSets {
+    integrationTest {
+        java {
+            compileClasspath += sourceSets.main.output + sourceSets.test.output
+            runtimeClasspath += sourceSets.main.output + sourceSets.test.output
+        }
+    }
+}
+
+
 group = 'com.mahesh.movies.api'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+version = '0.0.1'
 
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
     }
+    integrationTestImplementation.extendsFrom(testImplementation)
+    integrationTestRuntimeOnly.extendsFrom(testRuntime)
 }
 
 repositories {
     mavenCentral()
     google()
+}
+
+jar {
+    manifest {
+        attributes(
+                'Class-Path': configurations.collect { it.getName() }.join(' '),
+                'Main-Class': 'com.mahesh.movies.api.moviesapi.MoviesApiApplication'
+        )
+    }
 }
 
 dependencies {
@@ -27,12 +50,36 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
+
+
+    runtimeOnly("org.postgresql:postgresql")
+
+    testRuntimeOnly("org.postgresql:postgresql") {
+        because("tests need the Postgres JDBC driver")
+    }
+
     testImplementation 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'io.rest-assured:rest-assured'
     testImplementation 'net.datafaker:datafaker:1.5.0'
+    testImplementation 'org.springframework.boot:spring-boot-testcontainers'
+    testImplementation 'org.testcontainers:testcontainers'
+    testImplementation 'org.testcontainers:junit-jupiter'
+    testImplementation 'org.testcontainers:postgresql'
 }
 
-tasks.named('test') {
+
+tasks.register('integrationTest', Test) {
+    description = 'Runs integration tests.'
+    group = 'verification'
+
+    testClassesDirs = sourceSets.integrationTest.output.classesDirs
+    classpath = sourceSets.integrationTest.runtimeClasspath
+
     useJUnitPlatform()
 }
+
+test {
+    useJUnitPlatform()
+}
+

@@ -50,14 +50,14 @@ public class ListOrderTest {
 
     @Test
     public void checkListOrderWithStreams() {
-        Set<Integer> integerList = new HashSet<>(asList(1, 2, 3, 4, 5));
-        List<Integer> integerSet = integerList.stream().collect(toList());
-        Assertions.assertEquals(asList(1, 2, 3, 4, 5), integerSet);
+        Set<Integer> integerList = new HashSet<>(Arrays.asList(1, 2, 3, 4, 5));
+        List<Integer> integerSet = integerList.stream().collect(Collectors.toList());
+        Assertions.assertEquals(Arrays.asList(1, 2, 3, 4, 5), integerSet);
     }
 
     @Test
     public void sumOfElementsWithStreams() {
-        Set<Integer> integerList = new HashSet<>(asList(1, 2, 3, 4, 5));
+        Set<Integer> integerList = new HashSet<>(Arrays.asList(1, 2, 3, 4, 5));
         int sumInt = IntStream.of(1, 2, 3, 4, 5).sum();
         Assertions.assertEquals(15, sumInt);
     }
@@ -65,7 +65,7 @@ public class ListOrderTest {
     @Test
     public void partitionListWithStreams() {
         List<Integer> integersStrings = Arrays.asList(1, 2, 3, 4, 5, 6);
-        System.out.println(integersStrings.stream().collect(partitioningBy(integer -> integer % 2 == 0)));
+        System.out.println(integersStrings.stream().collect(Collectors.partitioningBy(integer -> integer % 2 == 0)));
         // Assertions.assertEquals(15, sumInt);
     }
 

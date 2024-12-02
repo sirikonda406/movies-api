@@ -36,7 +36,7 @@ public class RatioOfPositiveNegativeNumbersInArray {
         //Arrays.stream(ints).collect(groupingBy(s -> s < 0, counting())).forEach((key, value) -> System.out.println("key::::" + key + "::value::" + value));
         Arrays.stream(ints);
 
-        Arrays.stream(ints).filter(integer -> integer >= 0).collect(groupingBy(s -> s, counting())).forEach((key, value) -> System.out.println("key::::" + key + "::value::" + value));
+        Arrays.stream(ints).filter(integer -> integer >= 0).collect(Collectors.groupingBy(s -> s, Collectors.counting())).forEach((key, value) -> System.out.println("key::::" + key + "::value::" + value));
 
         // Arrays.stream(ints).collect(groupingBy(s -> s, counting())).forEach((key, value) -> System.out.println("key::::" + key + "::value::" + Float.valueOf(value) / Float.valueOf(ints.length)));
 

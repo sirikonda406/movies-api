@@ -11,10 +11,10 @@ public class SequenceIdentification {
     public static void main(String[] args) {
         String input = "123456";
 
-        Map<Object, Long> bits = Arrays.stream(input.split("")).collect(groupingBy(s -> s, counting()));
+        Map<Object, Long> bits = Arrays.stream(input.split("")).collect(Collectors.groupingBy(s -> s, Collectors.counting()));
 
-        System.out.println(Arrays.stream(input.split("")).collect(maxBy(Comparator.comparing(s -> s))));
-        System.out.println(Arrays.stream(input.split("")).collect(summingLong(value -> Integer.valueOf(value))));
+        System.out.println(Arrays.stream(input.split("")).collect(Collectors.maxBy(Comparator.comparing(s -> s))));
+        System.out.println(Arrays.stream(input.split("")).collect(Collectors.summingLong(value -> Integer.valueOf(value))));
     }
 
    /* public static void main(String[] args) {
