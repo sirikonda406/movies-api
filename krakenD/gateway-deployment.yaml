@@ -1,0 +1,174 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: krakend-config
+data:
+  krakend.json: |
+    {
+      "$schema": "https://www.krakend.io/schema/v3.json",
+      "version": 3,
+      "name": "API Gateway",
+      "cache_ttl": "3600s",
+      "timeout": "60s",
+      "log_level": "TRACE",
+      "debug_endpoint": true,
+      "extra_config": {
+        "security/cors": {
+          "allow_origins": [
+            "*"
+          ],
+          "allow_methods": [
+            "GET",
+            "HEAD",
+            "POST"
+          ],
+          "expose_headers": [
+            "Content-Length",
+            "Content-Type",
+            "Authorization"
+          ],
+          "allow_headers": [
+            "Origin",
+            "Content-Type",
+            "Accept-Language",
+            "Authorization"
+          ],
+          "max_age": "12h",
+          "allow_credentials": true,
+          "debug": true
+        }
+      },
+      "endpoints": [
+        {
+          "endpoint": "/debug",
+          "cache_ttl": "1s",
+          "backend": [
+            {
+              "host": [
+                "http://krakend:8000"
+              ],
+              "url_pattern": "/__debug/debug"
+            }
+          ]
+        },
+        {
+          "endpoint": "/movies",
+          "cache_ttl": "1s",
+          "backend": [
+            {
+              "host": [
+                "http://movies:8080"
+              ],
+              "url_pattern": "/movies",
+              "extra_config": {
+                "github.com/devopsfaith/krakend/proxy": {
+                  "response_type": "string"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "endpoint": "/hello",
+          "method": "GET",
+          "cache_ttl": "1s",
+          "headers_to_pass": ["*"],
+          "input_headers": ["*"],
+          "extra_config": {
+            "headers_to_pass":["*"],
+            "auth/validator":{
+              "alg": "RS256",
+              "jwk_url": "http://keycloak:8180/auth/realms/pulse/protocol/openid-connect/certs",
+              "disable_jwk_security": true,
+              "operation_debug": true
+            }
+          },
+          "backend": [
+            {
+              "host": [
+                "http://krakend:8000"
+              ],
+              "extra_config": {
+                "headers_to_pass":["*"]
+              },
+              "url_pattern": "/__debug/debug"
+            }
+          ]
+          
+        },
+        {
+          "endpoint": "/test",
+          "method": "GET",
+          "cache_ttl": "1s",
+          "headers_to_pass": ["*"],
+          "input_headers": ["*"],
+          "extra_config": {
+            "headers_to_pass":["*"],
+            "auth/validator":{
+              "alg": "RS256",
+              "jwk_url": "http://keycloak:8180/auth/realms/pulse/protocol/openid-connect/certs",
+              "disable_jwk_security": true,
+              "operation_debug": true
+            }
+          },
+          "backend": [
+            {
+              "host": [
+                "http://movies:8080"
+              ],
+              "extra_config": {
+                "headers_to_pass":["*"]
+              },
+              "url_pattern": "/test"
+            }
+          ]        
+        }
+      ]
+    }
+---
+# keycloak-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: krakend-deployment
+spec:
+  selector:
+    matchLabels:
+      app: krakend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: krakend
+    spec:
+      containers:
+        - name: krakend
+          image: pulse-krakend:0.0.1
+          ports:
+            - containerPort: 8000
+          volumeMounts:
+            - mountPath: /etc/krakend/krakend.json
+              name: krakend-config
+              subPath: krakend.json
+          imagePullPolicy: IfNotPresent
+          command: [ "/usr/bin/krakend" ]
+          args: [ "run", "-d", "-c", "/etc/krakend/krakend.json", "-p", "8000"]
+      volumes:
+        - name: krakend-config
+          configMap:
+            name: krakend-config
+---
+# kraken-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: krakend
+spec:
+  selector:
+    app: krakend
+  ports:
+    - name: http
+      port: 8000
+      targetPort: 8000
+      protocol: TCP
+  type: LoadBalancer  # Use ClusterIP for internal access

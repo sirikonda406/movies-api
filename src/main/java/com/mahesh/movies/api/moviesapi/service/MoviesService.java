@@ -1,9 +1,10 @@
 package com.mahesh.movies.api.moviesapi.service;
 
 import com.mahesh.movies.api.moviesapi.dto.MovieDto;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class MoviesService implements IMoviesService {
     @Override
     public List<MovieDto> rtrvMovies() {

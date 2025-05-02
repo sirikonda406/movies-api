@@ -1,0 +1,87 @@
+{
+  "version": 3,
+  "name": "API Gateway",
+  "cache_ttl": "3600s",
+  "timeout": "60s",
+  "log_level": "DEBUG",
+  "debug_endpoint": true,
+  "extra_config": {
+    "github.com/devopsfaith/krakend-cors": {
+      "allow_origins": ["*"],
+      "allow_methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+      "allow_headers": ["Authorization", "Content-Type"]
+    }
+  },
+  "endpoints": [
+    {
+      "endpoint": "/debug",
+      "backend": [
+        {
+          "host": [
+            "http://krakend:8000"
+          ],
+          "url_pattern": "/__debug/debug"
+        }
+      ]
+    },
+    {
+      "endpoint": "/movies",
+      "backend": [
+        {
+          "host": [
+            "http://movies:8080"
+          ],
+          "url_pattern": "/movies",
+
+          "extra_config": {
+            "github.com/devopsfaith/krakend/proxy": {
+              "response_type": "string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "endpoint": "/hello",
+      "method": "GET",
+      "output_encoding": "json",
+      "extra_config": {
+        "github.com/devopsfaith/krakend-jose/validator": {
+          "alg": "RS256",
+          "jwk_url": "http://keycloak:8180/auth/realms/pulse/protocol/openid-connect/certs",
+          "disable_jwk_security": true,
+          "operation_debug": true
+        }
+      },
+      "backend": [
+        {
+          "encoding": "json",
+          "host": [
+            "http://movies:8080"
+          ],
+          "url_pattern": "/hello"
+        }
+      ]
+    },
+    {
+      "endpoint": "/test",
+      "method": "GET",
+      "extra_config": {
+        "github.com/devopsfaith/krakend-jose/validator": {
+          "alg": "RS256",
+          "jwk_url": "http://keycloak:8180/auth/realms/pulse/protocol/openid-connect/certs",
+          "disable_jwk_security": true,
+          "operation_debug": true
+        }
+      },
+      "backend": [
+        {
+          "host": [
+            "http://movies:8080"
+          ],
+          "url_pattern": "/test"
+        }
+      ]
+    }
+  ]
+}

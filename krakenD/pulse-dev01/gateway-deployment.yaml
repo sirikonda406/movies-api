@@ -1,0 +1,119 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: krakend-config
+data:
+  krakend.json: |
+    {
+      "$schema": "https://www.krakend.io/schema/v3.json",
+      "version": 3,
+      "name": "API Gateway",
+      "cache_ttl": "3600s",
+      "timeout": "60s",
+      "log_level": "TRACE",
+      "debug_endpoint": true,
+      "security/cors": {
+        "allow_origins": ["*"],
+        "allow_methods": ["POST", "GET"],
+        "allow_headers": ["Origin", "Authorization", "Content-Type"],
+        "expose_headers": ["Content-Length"],
+        "max_age": "12h"
+      },
+      "endpoints": [
+        {
+          "endpoint": "/debug",
+          "cache_ttl": "1s",
+          "backend": [
+            {
+              "host": [
+                "http://krakend:8000"
+              ],
+              "url_pattern": "/__debug/debug"
+            }
+          ]
+        },
+        {
+          "endpoint": "/auth/admin/realms",
+          "method": "GET",
+          "cache_ttl": "1s",
+          "output_encoding": "no-op",
+          "extra_config": {
+            "headers_to_pass":["*"],
+            "auth/validator":{
+              "alg": "RS256",
+              "jwk_url": "http://keycloak/auth/realms/master/protocol/openid-connect/certs",
+              "disable_jwk_security": true,
+              "operation_debug": true
+            }
+          },
+          "backend": [
+            {
+              "encoding": "no-op",
+              "method": "GET",
+              "extra_config": {},
+              "host": [
+                "http://keycloak:8080"
+              ],
+              "url_pattern": "/auth/admin/realms",
+              "disable_host_sanitize": false
+            }
+          ]
+        }       
+      ]
+    }
+---
+# keycloak-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: krakend
+spec:
+  selector:
+    matchLabels:
+      app: krakend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: krakend
+    spec:
+      containers:
+        - name: krakend
+          image: docker.irisxtract.com/pulse-krakend:0.0.1
+          ports:
+            - containerPort: 8000
+          resources:
+            requests:
+              memory: 250Mi
+              cpu: 100m
+            limits:
+              memory: 250Mi
+              cpu: 2000m
+          volumeMounts:
+            - mountPath: /etc/krakend/krakend.json
+              name: krakend-config
+              subPath: krakend.json
+          imagePullPolicy: IfNotPresent
+          command: [ "/usr/bin/krakend" ]
+          args: [ "run", "-d", "-c", "/etc/krakend/krakend.json", "-p", "8000"]
+      imagePullSecrets:
+        - name: regcred
+      volumes:
+        - name: krakend-config
+          configMap:
+            name: krakend-config
+---
+# kraken-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: krakend
+spec:
+  selector:
+    app: krakend
+  ports:
+    - name: http
+      port: 8000
+      targetPort: 8000
+      protocol: TCP
+  type: ClusterIP  # Use ClusterIP for internal access
