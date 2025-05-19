@@ -33,29 +33,40 @@ data:
           ]
         },
         {
-          "endpoint": "/auth/admin/realms",
-          "method": "GET",
-          "cache_ttl": "1s",
+          "endpoint": "/appshell",
           "output_encoding": "no-op",
-          "extra_config": {
-            "headers_to_pass":["*"],
-            "auth/validator":{
-              "alg": "RS256",
-              "jwk_url": "http://keycloak/auth/realms/master/protocol/openid-connect/certs",
-              "disable_jwk_security": true,
-              "operation_debug": true
-            }
-          },
+          "cache_ttl": "1s",
+          "headers_to_pass": ["*"],
+          "input_headers": ["*"],
           "backend": [
             {
-              "encoding": "no-op",
-              "method": "GET",
-              "extra_config": {},
               "host": [
-                "http://keycloak:8080"
+                "http://pulseui-appshell:8080"
               ],
-              "url_pattern": "/auth/admin/realms",
-              "disable_host_sanitize": false
+              "output_encoding": "no-op",
+              "extra_config": {
+                "headers_to_pass":["*"]
+              },
+              "url_pattern": "/appshell/#/authcallback&state=6f301738-2080-40d3-9e74-5275fc844764"
+            }
+          ]
+        },
+        {
+          "endpoint": "/pulse_auth",
+          "output_encoding": "no-op",
+          "cache_ttl": "1s",
+          "headers_to_pass": ["*"],
+          "input_headers": ["*"],
+          "backend": [
+            {
+              "host": [
+                "http://pulseui-appshell:8080"
+              ],
+              "output_encoding": "no-op",
+              "extra_config": {
+                "headers_to_pass":["*"]
+              },
+              "url_pattern": "http://localhost:8081/pulse_auth/signin?redirect=http://localhost:8081/appshell/#/authcallback&state=01ce89fb-c544-4423-ad98-77224b900613/signin?redirect=http//localhost8080/appshell/authcallback&state=01ce89fb-c544-4423-ad98-77224b900613"
             }
           ]
         },
@@ -63,26 +74,49 @@ data:
           "endpoint": "/graphs",
           "method": "GET",
           "cache_ttl": "1s",
-          "output_encoding": "no-op",
+          "headers_to_pass": ["*"],
+          "input_headers": ["*"],
           "extra_config": {
             "headers_to_pass":["*"],
             "auth/validator":{
               "alg": "RS256",
-              "jwk_url": "http://keycloak/auth/realms/master/protocol/openid-connect/certs",
+              "jwk_url": "http://keycloak:8080/auth/realms/irispulse/protocol/openid-connect/certs",
               "disable_jwk_security": true,
               "operation_debug": true
             }
           },
           "backend": [
             {
-              "encoding": "no-op",
-              "method": "GET",
-              "extra_config": {},
+              "host": ["http://workflowgraph:8080"],
+              "extra_config": {"headers_to_pass":["*"]},
+              "url_pattern": "/workflow/681cb7acfd4e9602e71ff364/graphs"
+            }
+          ]
+        },
+        {
+          "endpoint": "/certs",
+          "method": "GET",
+          "cache_ttl": "1s",
+          "headers_to_pass": ["*"],
+          "input_headers": ["*"],
+          "extra_config": {
+            "headers_to_pass":["*"],
+            "auth/validator":{
+              "alg": "RS256",
+              "jwk_url": "http://keycloak:8080/auth/realms/irispulse/protocol/openid-connect/certs",
+              "disable_jwk_security": true,
+              "operation_debug": true
+            }
+          },
+          "backend": [
+            {
               "host": [
-                "http://workflow-graph:8080"
+                "http://keycloak:8080"
               ],
-              "url_pattern": "/workflow/681cb7acfd4e9602e71ff364/graphs?format=shortinfo&criteria=3",
-              "disable_host_sanitize": false
+              "extra_config": {
+                "headers_to_pass":["*"]
+              },
+              "url_pattern": "/auth/realms/irispulse/protocol/openid-connect/certs"
             }
           ]
         }       
@@ -106,7 +140,7 @@ spec:
     spec:
       containers:
         - name: krakend
-          image: docker.irisxtract.com/pulse-krakend:0.0.1
+          image: docker.irisxtract.com/pulse/pulse-api-gateway:0.0.1
           ports:
             - containerPort: 8000
           resources:

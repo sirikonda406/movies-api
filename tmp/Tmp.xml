@@ -1,0 +1,2031 @@
+<List>
+    <item>
+        <creatorGroups>
+            <creatorGroups>ADMIN</creatorGroups>
+            <creatorGroups>__APSUITE__DEFAULT__GROUP__</creatorGroups>
+        </creatorGroups>
+        <code>APSuite</code>
+        <emailTemplate>APSuite</emailTemplate>
+        <creators>
+            <creators>ADMIN</creators>
+            <creators>__APSUITE__DEFAULT__GROUP__</creators>
+        </creators>
+        <preservationDuration>
+            <milliseconds>0</milliseconds>
+            <hours>0</hours>
+            <seconds>0</seconds>
+            <months>0</months>
+            <minutes>0</minutes>
+            <days>0</days>
+            <years>0</years>
+        </preservationDuration>
+        <uniqueForObject>A</uniqueForObject>
+        <supervisorGroups>
+            <supervisorGroups>ADMIN</supervisorGroups>
+            <supervisorGroups>__APSUITE__DEFAULT__GROUP__</supervisorGroups>
+        </supervisorGroups>
+        <creationDate>2025-05-08T13:56:23.369496Z</creationDate>
+        <descriptions>
+            <descriptions>
+                <language>EN</language>
+            </descriptions>
+            <descriptions>
+                <language>FR</language>
+            </descriptions>
+        </descriptions>
+        <version>0</version>
+        <labels>
+            <labels>
+                <language>EN</language>
+            </labels>
+            <labels>
+                <language>FR</language>
+            </labels>
+        </labels>
+        <formDefinition>
+            <code code="WORKFLOW"/>
+            <groups>
+                <group>
+                    <code code="VERIFICATION"/>
+                    <minimumCardinality>0</minimumCardinality>
+                    <maximumCardinality>1</maximumCardinality>
+                    <fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="true" deleteOldValue="false" displayCode="false"
+                                type="BOOL">
+                            <labels>
+                                <label language="EN" value="Verification step enabled"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="UGRP">
+                            <labels>
+                                <label language="EN" value="Verification group"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="BOOL">
+                            <labels>
+                                <label language="EN" value="Verification step  approved"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="DATETIME">
+                            <labels>
+                                <label language="EN" value="Verification first limit date"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="DATETIME">
+                            <labels>
+                                <label language="EN" value="Verification second limit date"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="USER">
+                            <labels>
+                                <label language="EN" value="Verification approval user"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="DATETIME">
+                            <labels>
+                                <label language="EN" value="Verification approval date"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="USER">
+                            <labels>
+                                <label language="EN" value="Verification rejection user"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="DATETIME">
+                            <labels>
+                                <label language="EN" value="Verification rejection date"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="TEXT">
+                            <labels>
+                                <label language="EN" value="Verification reason for reject"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                    </fields>
+                    <displayMode>O</displayMode>
+                    <labels>
+                        <label language="EN" value="Verification step"/>
+                    </labels>
+                </group>
+                <group>
+                    <code code="APPROVAL1"/>
+                    <minimumCardinality>0</minimumCardinality>
+                    <maximumCardinality>1</maximumCardinality>
+                    <fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="true" deleteOldValue="false" displayCode="false"
+                                type="BOOL">
+                            <labels>
+                                <label language="EN" value="Approval 1 step enabled"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="USER">
+                            <labels>
+                                <label language="EN" value="Approval 1 users"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>50</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="UGRP">
+                            <labels>
+                                <label language="EN" value="Approval 1 groups"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>10</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="BIGDECIMAL">
+                            <labels>
+                                <label language="EN" value="Approval 1 approval limit"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision>12</precision>
+                            <scale>2</scale>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="BOOL">
+                            <labels>
+                                <label language="EN" value="Approval 1 step approved"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="DATETIME">
+                            <labels>
+                                <label language="EN" value="Approval 1 first limit date"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="DATETIME">
+                            <labels>
+                                <label language="EN" value="Approval 1 second limit date"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="USER">
+                            <labels>
+                                <label language="EN" value="Approval 1 approval user"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="DATETIME">
+                            <labels>
+                                <label language="EN" value="Approval 1 approval date"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="USER">
+                            <labels>
+                                <label language="EN" value="Approval 1 rejection user"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="DATETIME">
+                            <labels>
+                                <label language="EN" value="Approval 1 rejection date"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="TEXT">
+                            <labels>
+                                <label language="EN" value="Approval 1 reason for reject"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                    </fields>
+                    <displayMode>O</displayMode>
+                    <labels>
+                        <label language="EN" value="Approval1 step"/>
+                    </labels>
+                </group>
+                <group>
+                    <code code="APPROVAL2"/>
+                    <minimumCardinality>0</minimumCardinality>
+                    <maximumCardinality>1</maximumCardinality>
+                    <fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="true" deleteOldValue="false" displayCode="false"
+                                type="BOOL">
+                            <labels>
+                                <label language="EN" value="Approval 2 step enabled"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="USER">
+                            <labels>
+                                <label language="EN" value="Approval 2 users"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>50</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="UGRP">
+                            <labels>
+                                <label language="EN" value="Approval 2 groups"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>10</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="BIGDECIMAL">
+                            <labels>
+                                <label language="EN" value="Approval 2 approval limit"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision>12</precision>
+                            <scale>2</scale>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="BOOL">
+                            <labels>
+                                <label language="EN" value="Approval 2 step approved"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="DATETIME">
+                            <labels>
+                                <label language="EN" value="Approval 2 first limit date"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="DATETIME">
+                            <labels>
+                                <label language="EN" value="Approval 2 second limit date"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="USER">
+                            <labels>
+                                <label language="EN" value="Approval 2 approval user"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="DATETIME">
+                            <labels>
+                                <label language="EN" value="Approval 2 approval date"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="USER">
+                            <labels>
+                                <label language="EN" value="Approval 2 rejection user"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="DATETIME">
+                            <labels>
+                                <label language="EN" value="Approval 2 rejection date"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="TEXT">
+                            <labels>
+                                <label language="EN" value="Approval 2 reason for reject"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                    </fields>
+                    <displayMode>O</displayMode>
+                    <labels>
+                        <label language="EN" value="Approval2 step"/>
+                    </labels>
+                </group>
+                <group>
+                    <code code="CONTROLLING"/>
+                    <minimumCardinality>0</minimumCardinality>
+                    <maximumCardinality>1</maximumCardinality>
+                    <fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="true" deleteOldValue="false" displayCode="false"
+                                type="BOOL">
+                            <labels>
+                                <label language="EN" value="Controlling step enabled"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="UGRP">
+                            <labels>
+                                <label language="EN" value="Controlling group"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="BOOL">
+                            <labels>
+                                <label language="EN" value="Controlling step approved"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="BIGDECIMAL">
+                            <labels>
+                                <label language="EN" value="Controlling approval limit"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision>12</precision>
+                            <scale>2</scale>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="DATETIME">
+                            <labels>
+                                <label language="EN" value="Controlling fist limit date"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="DATETIME">
+                            <labels>
+                                <label language="EN" value="Controlling second limit date"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="USER">
+                            <labels>
+                                <label language="EN" value="Controlling approval user"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="DATETIME">
+                            <labels>
+                                <label language="EN" value="Controlling approval date"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                    </fields>
+                    <displayMode>O</displayMode>
+                    <labels>
+                        <label language="EN" value="Controlling step"/>
+                    </labels>
+                </group>
+                <group>
+                    <code code="PAYMENT_APPROVAL"/>
+                    <minimumCardinality>0</minimumCardinality>
+                    <maximumCardinality>1</maximumCardinality>
+                    <fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="true" deleteOldValue="false" displayCode="false"
+                                type="BOOL">
+                            <labels>
+                                <label language="EN" value="Payment approval step enabled"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="UGRP">
+                            <labels>
+                                <label language="EN" value="Payment approval group"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="BOOL">
+                            <labels>
+                                <label language="EN" value="Payment approval step approved"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="BIGDECIMAL">
+                            <labels>
+                                <label language="EN" value="Payment approval approval limit"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision>12</precision>
+                            <scale>2</scale>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="DATETIME">
+                            <labels>
+                                <label language="EN" value="Payment approval first limit date"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="DATETIME">
+                            <labels>
+                                <label language="EN" value="Payment approval second limit date"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="USER">
+                            <labels>
+                                <label language="EN" value="Payment approval approval user"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="DATETIME">
+                            <labels>
+                                <label language="EN" value="Payment approval approval date"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                    </fields>
+                    <displayMode>O</displayMode>
+                    <labels>
+                        <label language="EN" value="Payment approval step"/>
+                    </labels>
+                </group>
+                <group>
+                    <code code="FINAL_ACCOUNTING_CHECK"/>
+                    <minimumCardinality>0</minimumCardinality>
+                    <maximumCardinality>1</maximumCardinality>
+                    <fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="true" deleteOldValue="false" displayCode="false"
+                                type="BOOL">
+                            <labels>
+                                <label language="EN" value="Final accouting check step enabled"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="UGRP">
+                            <labels>
+                                <label language="EN" value="Final accounting check group"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="BOOL">
+                            <labels>
+                                <label language="EN" value="Final accounting check approved"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="BIGDECIMAL">
+                            <labels>
+                                <label language="EN" value="Final accounting check approval limit"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision>12</precision>
+                            <scale>2</scale>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="DATETIME">
+                            <labels>
+                                <label language="EN" value="Final accounting check first limit date"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="DATETIME">
+                            <labels>
+                                <label language="EN" value="Final accounting check second limit date"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="USER">
+                            <labels>
+                                <label language="EN" value="Final accounting check approval user"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="DATETIME">
+                            <labels>
+                                <label language="EN" value="Final accounting check approval date"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                    </fields>
+                    <displayMode>O</displayMode>
+                    <labels>
+                        <label language="EN" value="Final accounting check step"/>
+                    </labels>
+                </group>
+                <group>
+                    <code code="REJECT_INFO"/>
+                    <minimumCardinality>0</minimumCardinality>
+                    <maximumCardinality>1</maximumCardinality>
+                    <fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="USER">
+                            <labels>
+                                <label language="EN" value="Rejection user"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="DATETIME">
+                            <labels>
+                                <label language="EN" value="Rejection date"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                    </fields>
+                    <displayMode>O</displayMode>
+                    <labels>
+                        <label language="EN" value="Reject information"/>
+                    </labels>
+                </group>
+                <group>
+                    <code code="APPROVAL_INFO"/>
+                    <minimumCardinality>0</minimumCardinality>
+                    <maximumCardinality>1</maximumCardinality>
+                    <fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="USER">
+                            <labels>
+                                <label language="EN" value="Approval user"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                        <fields displayLabel="true" displayDescription="false" pickerComparisonMode="CI_AI" code=""
+                                matchCode="false" hidden="false" triggerUpdateFormDefinition="false"
+                                matchDescription="false" defaultValue="false" deleteOldValue="false" displayCode="false"
+                                type="DATETIME">
+                            <labels>
+                                <label language="EN" value="Approval date"/>
+                            </labels>
+                            <password>false</password>
+                            <minimumCardinality>0</minimumCardinality>
+                            <matchLabel>true</matchLabel>
+                            <maximumCardinality>1</maximumCardinality>
+                            <defaultValueType>STD</defaultValueType>
+                            <matchMode>C</matchMode>
+                            <precision/>
+                            <scale/>
+                        </fields>
+                    </fields>
+                    <displayMode>O</displayMode>
+                    <labels>
+                        <label language="EN" value="Approval information"/>
+                    </labels>
+                </group>
+            </groups>
+            <labels>
+                <label language="EN" value="Workflow"/>
+            </labels>
+        </formDefinition>
+        <nodes>
+            <nodes>
+                <code>DataExtraction</code>
+                <timeoutType>NONE</timeoutType>
+                <exitActions>
+                    <exitActions order="1" type="SA"
+                                 scriptFile="javaclass:com.iriscorporate.irisnext.bls.servicesimpl.apsuite.workflow.scripts.APSuiteTransformDocumentScript"/>
+                </exitActions>
+                <type>ANALYZE_XSERVICE</type>
+                <descriptions>
+                    <descriptions>
+                        <language>EN</language>
+                    </descriptions>
+                    <descriptions>
+                        <language>FR</language>
+                    </descriptions>
+                </descriptions>
+                <notification>N</notification>
+                <waitForNextTask>false</waitForNextTask>
+                <autoAccept>true</autoAccept>
+                <routingType>DA</routingType>
+                <id>41</id>
+                <sdstype>ANALYZE_XSERVICE</sdstype>
+                <delay1 type="NONE">
+                    <delay years="0" months="0" days="0" hours="0" minutes="0" seconds="0" milliseconds="0"/>
+                    <delayField/>
+                </delay1>
+                <overrideOperators>false</overrideOperators>
+                <delay2 type="NONE">
+                    <delay years="0" months="0" days="0" hours="0" minutes="0" seconds="0" milliseconds="0"/>
+                    <delayField/>
+                </delay2>
+                <isStart>false</isStart>
+                <graph>4</graph>
+                <labels>
+                    <labels>
+                        <value>Automatic Data extraction</value>
+                        <language>EN</language>
+                    </labels>
+                    <labels>
+                        <language>FR</language>
+                    </labels>
+                </labels>
+                <isRepeatable>false</isRepeatable>
+                <maxRepetitions>0</maxRepetitions>
+                <joinType>OR</joinType>
+                <canCreateSubtasks>false</canCreateSubtasks>
+                <overrideSupervisors>false</overrideSupervisors>
+                <generateXDocTextLayer>false</generateXDocTextLayer>
+                <generateTifJpgImages>false</generateTifJpgImages>
+                <generateJsonTextLayer>false</generateJsonTextLayer>
+                <generateBinaryTextLayer>false</generateBinaryTextLayer>
+                <layoutInfoDto>
+                    <positionX>210</positionX>
+                    <positionY>70</positionY>
+                </layoutInfoDto>
+                <generatePngImages>false</generatePngImages>
+                <resultOptions saveBatchVariables="true" saveBatchRawResults="false" saveUnitVariables="false"
+                               saveUnitRawResults="false" saveDocumentVariables="true" saveDocumentRawResults="true"
+                               savePageVariables="false" savePageRawResults="false"/>
+                <xServiceApplication>&lt;data>&lt;code>SPAP&lt;/code>&lt;/data></xServiceApplication>
+                <start>false</start>
+                <repeatable>false</repeatable>
+                <xserviceApplication>&lt;data>&lt;code>SPAP&lt;/code>&lt;/data></xserviceApplication>
+            </nodes>
+            <nodes>
+                <code>APPROVAL1</code>
+                <timeoutType>NONE</timeoutType>
+                <guard>
+                    javaclass:com.iriscorporate.irisnext.bls.servicesimpl.apsuite.workflow.scripts.APSuiteWorkflowNodeEntranceScript
+                </guard>
+                <type>FILL_FIELDS</type>
+                <descriptions>
+                    <descriptions>
+                        <language>EN</language>
+                    </descriptions>
+                    <descriptions>
+                        <language>FR</language>
+                    </descriptions>
+                </descriptions>
+                <routingRules>
+                    <conditions>
+                        <conditions arcName="rejected">
+                            <groups>
+                                <groups>
+                                    <fields>
+                                        <fields>
+                                            <fieldName code="approval1_approved"/>
+                                            <values>
+                                                <values value="false"/>
+                                            </values>
+                                            <operator>0</operator>
+                                            <operand>eq</operand>
+                                        </fields>
+                                    </fields>
+                                    <operator>0</operator>
+                                </groups>
+                            </groups>
+                            <order>1</order>
+                        </conditions>
+                        <conditions arcName="GoToExport">
+                            <groups>
+                                <groups>
+                                    <fields>
+                                        <fields>
+                                            <fieldName code="verification_approved"/>
+                                            <values>
+                                                <values value="false"/>
+                                            </values>
+                                            <operator>0</operator>
+                                            <operand>eq</operand>
+                                        </fields>
+                                        <fields>
+                                            <fieldName code="approval2_approved"/>
+                                            <values>
+                                                <values value="false"/>
+                                            </values>
+                                            <operator>0</operator>
+                                            <operand>eq</operand>
+                                        </fields>
+                                    </fields>
+                                    <operator>0</operator>
+                                </groups>
+                            </groups>
+                            <order>2</order>
+                        </conditions>
+                        <conditions arcName="approved">
+                            <groups>
+                                <groups>
+                                    <fields>
+                                        <fields>
+                                            <fieldName code="approval1_approved"/>
+                                            <values>
+                                                <values value="true"/>
+                                            </values>
+                                            <operator>0</operator>
+                                            <operand>eq</operand>
+                                        </fields>
+                                    </fields>
+                                    <operator>0</operator>
+                                </groups>
+                            </groups>
+                            <order>3</order>
+                        </conditions>
+                    </conditions>
+                    <elseStatement/>
+                </routingRules>
+                <notification>D</notification>
+                <waitForNextTask>true</waitForNextTask>
+                <autoAccept>true</autoAccept>
+                <routingType>RC</routingType>
+                <id>36</id>
+                <sdstype>FILL_FIELDS</sdstype>
+                <enterActions>
+                    <enterActions order="1" type="SA"
+                                  scriptFile="javaclass:com.iriscorporate.irisnext.bls.servicesimpl.apsuite.workflow.scripts.APSuiteLimitDateScript"/>
+                </enterActions>
+                <delay1 type="FIELD">
+                    <delay years="0" months="0" days="0" hours="0" minutes="0" seconds="0" milliseconds="0"/>
+                    <delayField code="approval1_limit1"/>
+                </delay1>
+                <overrideOperators>true</overrideOperators>
+                <delay2 type="FIELD">
+                    <delay years="0" months="0" days="0" hours="0" minutes="0" seconds="0" milliseconds="0"/>
+                    <delayField code="approval1_limit2"/>
+                </delay2>
+                <isStart>false</isStart>
+                <graph>4</graph>
+                <labels>
+                    <labels>
+                        <value>Approval1</value>
+                        <language>EN</language>
+                    </labels>
+                    <labels>
+                        <language>FR</language>
+                    </labels>
+                </labels>
+                <isRepeatable>true</isRepeatable>
+                <maxRepetitions>0</maxRepetitions>
+                <joinType>OR</joinType>
+                <canCreateSubtasks>false</canCreateSubtasks>
+                <overrideSupervisors>false</overrideSupervisors>
+                <taskUser type="F">
+                    <userGroupFields>
+                        <userGroupFields code="approval1_group"/>
+                    </userGroupFields>
+                    <userFields>
+                        <userFields code="approval1_users"/>
+                    </userFields>
+                </taskUser>
+                <generateXDocTextLayer>false</generateXDocTextLayer>
+                <generateTifJpgImages>false</generateTifJpgImages>
+                <generateJsonTextLayer>false</generateJsonTextLayer>
+                <generateBinaryTextLayer>false</generateBinaryTextLayer>
+                <layoutInfoDto>
+                    <positionX>210</positionX>
+                    <positionY>230</positionY>
+                </layoutInfoDto>
+                <generatePngImages>false</generatePngImages>
+                <start>false</start>
+                <repeatable>true</repeatable>
+            </nodes>
+            <nodes>
+                <code>DocumentPreparation</code>
+                <timeoutType>NONE</timeoutType>
+                <type>PREPARE_XSERVICE</type>
+                <descriptions>
+                    <descriptions>
+                        <language>FR</language>
+                    </descriptions>
+                    <descriptions>
+                        <language>EN</language>
+                    </descriptions>
+                </descriptions>
+                <waitForNextTask>false</waitForNextTask>
+                <autoAccept>false</autoAccept>
+                <routingType>DA</routingType>
+                <id>39</id>
+                <sdstype>PREPARE_XSERVICE</sdstype>
+                <overrideOperators>false</overrideOperators>
+                <isStart>false</isStart>
+                <graph>4</graph>
+                <labels>
+                    <labels>
+                        <language>FR</language>
+                    </labels>
+                    <labels>
+                        <value>Document Preparation</value>
+                        <language>EN</language>
+                    </labels>
+                </labels>
+                <isRepeatable>false</isRepeatable>
+                <maxRepetitions>0</maxRepetitions>
+                <joinType>OR</joinType>
+                <canCreateSubtasks>false</canCreateSubtasks>
+                <overrideSupervisors>false</overrideSupervisors>
+                <renditionSettings>&lt;data>&lt;code>RS_PULSE_ADD&lt;/code>&lt;/data></renditionSettings>
+                <ocrMode>N</ocrMode>
+                <generateXDocTextLayer>false</generateXDocTextLayer>
+                <generateTifJpgImages>false</generateTifJpgImages>
+                <generateJsonTextLayer>false</generateJsonTextLayer>
+                <generateBinaryTextLayer>false</generateBinaryTextLayer>
+                <layoutInfoDto>
+                    <positionX>210</positionX>
+                    <positionY>10</positionY>
+                </layoutInfoDto>
+                <generatePngImages>true</generatePngImages>
+                <start>false</start>
+                <repeatable>false</repeatable>
+            </nodes>
+            <nodes>
+                <code>APPROVAL2</code>
+                <timeoutType>NONE</timeoutType>
+                <guard>
+                    javaclass:com.iriscorporate.irisnext.bls.servicesimpl.apsuite.workflow.scripts.APSuiteWorkflowNodeEntranceScript
+                </guard>
+                <type>FILL_FIELDS</type>
+                <descriptions>
+                    <descriptions>
+                        <language>FR</language>
+                    </descriptions>
+                    <descriptions>
+                        <language>EN</language>
+                    </descriptions>
+                </descriptions>
+                <routingRules>
+                    <conditions>
+                        <conditions arcName="approved">
+                            <groups>
+                                <groups>
+                                    <fields>
+                                        <fields>
+                                            <fieldName code="approval2_approved"/>
+                                            <values>
+                                                <values value="true"/>
+                                            </values>
+                                            <operator>0</operator>
+                                            <operand>eq</operand>
+                                        </fields>
+                                    </fields>
+                                    <operator>0</operator>
+                                </groups>
+                            </groups>
+                            <order>1</order>
+                        </conditions>
+                    </conditions>
+                    <elseStatement arcName="backtrack:APPROVAL1"/>
+                </routingRules>
+                <notification>D</notification>
+                <waitForNextTask>false</waitForNextTask>
+                <autoAccept>false</autoAccept>
+                <routingType>RC</routingType>
+                <id>35</id>
+                <sdstype>FILL_FIELDS</sdstype>
+                <enterActions>
+                    <enterActions order="1" type="SA"
+                                  scriptFile="javaclass:com.iriscorporate.irisnext.bls.servicesimpl.apsuite.workflow.scripts.APSuiteLimitDateScript"/>
+                </enterActions>
+                <delay1 type="FIELD">
+                    <delay years="0" months="0" days="0" hours="0" minutes="0" seconds="0" milliseconds="0"/>
+                    <delayField code="approval2_limit1"/>
+                </delay1>
+                <overrideOperators>false</overrideOperators>
+                <delay2 type="FIELD">
+                    <delay years="0" months="0" days="0" hours="0" minutes="0" seconds="0" milliseconds="0"/>
+                    <delayField code="approval2_limit2"/>
+                </delay2>
+                <isStart>false</isStart>
+                <graph>4</graph>
+                <labels>
+                    <labels>
+                        <language>FR</language>
+                    </labels>
+                    <labels>
+                        <value>Approval2</value>
+                        <language>EN</language>
+                    </labels>
+                </labels>
+                <isRepeatable>false</isRepeatable>
+                <maxRepetitions>0</maxRepetitions>
+                <joinType>OR</joinType>
+                <canCreateSubtasks>false</canCreateSubtasks>
+                <overrideSupervisors>false</overrideSupervisors>
+                <generateXDocTextLayer>false</generateXDocTextLayer>
+                <generateTifJpgImages>false</generateTifJpgImages>
+                <generateJsonTextLayer>false</generateJsonTextLayer>
+                <generateBinaryTextLayer>false</generateBinaryTextLayer>
+                <layoutInfoDto>
+                    <positionX>210</positionX>
+                    <positionY>320</positionY>
+                </layoutInfoDto>
+                <generatePngImages>false</generatePngImages>
+                <start>false</start>
+                <repeatable>false</repeatable>
+            </nodes>
+            <nodes>
+                <code>VERIFICATION</code>
+                <timeoutType>NONE</timeoutType>
+                <exitActions>
+                    <exitActions order="1" type="SA"
+                                 scriptFile="javaclass:com.iriscorporate.irisnext.bls.servicesimpl.apsuite.workflow.scripts.APSuiteExitVerifyScript"/>
+                </exitActions>
+                <guard>
+                    javaclass:com.iriscorporate.irisnext.bls.servicesimpl.apsuite.workflow.scripts.APSuiteWorkflowNodeEntranceScript
+                </guard>
+                <type>FILL_FIELDS</type>
+                <descriptions>
+                    <descriptions>
+                        <language>EN</language>
+                    </descriptions>
+                    <descriptions>
+                        <language>FR</language>
+                    </descriptions>
+                </descriptions>
+                <notification>D</notification>
+                <waitForNextTask>true</waitForNextTask>
+                <autoAccept>true</autoAccept>
+                <routingType>DA</routingType>
+                <id>37</id>
+                <sdstype>FILL_FIELDS</sdstype>
+                <enterActions>
+                    <enterActions order="1" type="SA"
+                                  scriptFile="javaclass:com.iriscorporate.irisnext.bls.servicesimpl.apsuite.workflow.scripts.APSuiteLimitDateScript"/>
+                </enterActions>
+                <delay1 type="FIELD">
+                    <delay years="0" months="0" days="0" hours="0" minutes="0" seconds="0" milliseconds="0"/>
+                    <delayField code="verification_limit1"/>
+                </delay1>
+                <overrideOperators>true</overrideOperators>
+                <delay2 type="FIELD">
+                    <delay years="0" months="0" days="0" hours="0" minutes="0" seconds="0" milliseconds="0"/>
+                    <delayField code="verification_limit2"/>
+                </delay2>
+                <isStart>false</isStart>
+                <graph>4</graph>
+                <labels>
+                    <labels>
+                        <value>Verification</value>
+                        <language>EN</language>
+                    </labels>
+                    <labels>
+                        <language>FR</language>
+                    </labels>
+                </labels>
+                <isRepeatable>false</isRepeatable>
+                <maxRepetitions>0</maxRepetitions>
+                <joinType>OR</joinType>
+                <canCreateSubtasks>false</canCreateSubtasks>
+                <overrideSupervisors>false</overrideSupervisors>
+                <taskUser type="F">
+                    <userGroupFields>
+                        <userGroupFields code="verification_group"/>
+                    </userGroupFields>
+                    <userFields/>
+                </taskUser>
+                <generateXDocTextLayer>false</generateXDocTextLayer>
+                <generateTifJpgImages>false</generateTifJpgImages>
+                <generateJsonTextLayer>false</generateJsonTextLayer>
+                <generateBinaryTextLayer>false</generateBinaryTextLayer>
+                <layoutInfoDto>
+                    <positionX>210</positionX>
+                    <positionY>140</positionY>
+                </layoutInfoDto>
+                <generatePngImages>false</generatePngImages>
+                <start>false</start>
+                <repeatable>false</repeatable>
+            </nodes>
+            <nodes>
+                <code>end1</code>
+                <timeoutType>NONE</timeoutType>
+                <type>END</type>
+                <descriptions>
+                    <descriptions>
+                        <language>FR</language>
+                    </descriptions>
+                    <descriptions>
+                        <language>EN</language>
+                    </descriptions>
+                </descriptions>
+                <waitForNextTask>false</waitForNextTask>
+                <autoAccept>false</autoAccept>
+                <routingType>DA</routingType>
+                <id>40</id>
+                <sdstype>END</sdstype>
+                <overrideOperators>false</overrideOperators>
+                <isStart>false</isStart>
+                <graph>4</graph>
+                <labels>
+                    <labels>
+                        <language>FR</language>
+                    </labels>
+                    <labels>
+                        <value>End 1</value>
+                        <language>EN</language>
+                    </labels>
+                </labels>
+                <isRepeatable>false</isRepeatable>
+                <maxRepetitions>0</maxRepetitions>
+                <joinType>OR</joinType>
+                <canCreateSubtasks>false</canCreateSubtasks>
+                <overrideSupervisors>false</overrideSupervisors>
+                <generateXDocTextLayer>false</generateXDocTextLayer>
+                <generateTifJpgImages>false</generateTifJpgImages>
+                <generateJsonTextLayer>false</generateJsonTextLayer>
+                <generateBinaryTextLayer>false</generateBinaryTextLayer>
+                <layoutInfoDto>
+                    <positionX>690</positionX>
+                    <positionY>230</positionY>
+                </layoutInfoDto>
+                <generatePngImages>false</generatePngImages>
+                <start>false</start>
+                <repeatable>false</repeatable>
+            </nodes>
+            <nodes>
+                <code>PAYMENT_APPROVAL</code>
+                <timeoutType>NONE</timeoutType>
+                <guard>
+                    javaclass:com.iriscorporate.irisnext.bls.servicesimpl.apsuite.workflow.scripts.APSuiteWorkflowNodeEntranceScript
+                </guard>
+                <type>FILL_FIELDS</type>
+                <descriptions>
+                    <descriptions>
+                        <language>FR</language>
+                    </descriptions>
+                    <descriptions>
+                        <language>EN</language>
+                    </descriptions>
+                </descriptions>
+                <routingRules>
+                    <conditions>
+                        <conditions arcName="approved">
+                            <groups>
+                                <groups>
+                                    <fields>
+                                        <fields>
+                                            <fieldName code="payment_approval_approved"/>
+                                            <values>
+                                                <values value="true"/>
+                                            </values>
+                                            <operator>0</operator>
+                                            <operand>eq</operand>
+                                        </fields>
+                                    </fields>
+                                    <operator>0</operator>
+                                </groups>
+                            </groups>
+                            <order>1</order>
+                        </conditions>
+                    </conditions>
+                    <elseStatement/>
+                </routingRules>
+                <notification>D</notification>
+                <waitForNextTask>true</waitForNextTask>
+                <autoAccept>true</autoAccept>
+                <routingType>RC</routingType>
+                <id>42</id>
+                <sdstype>FILL_FIELDS</sdstype>
+                <enterActions>
+                    <enterActions order="1" type="SA"
+                                  scriptFile="javaclass:com.iriscorporate.irisnext.bls.servicesimpl.apsuite.workflow.scripts.APSuiteLimitDateScript"/>
+                </enterActions>
+                <delay1 type="FIELD">
+                    <delay years="0" months="0" days="0" hours="0" minutes="0" seconds="0" milliseconds="0"/>
+                    <delayField code="payment_approval_limit1"/>
+                </delay1>
+                <overrideOperators>true</overrideOperators>
+                <delay2 type="FIELD">
+                    <delay years="0" months="0" days="0" hours="0" minutes="0" seconds="0" milliseconds="0"/>
+                    <delayField code="payment_approval_limit2"/>
+                </delay2>
+                <isStart>false</isStart>
+                <graph>4</graph>
+                <labels>
+                    <labels>
+                        <language>FR</language>
+                    </labels>
+                    <labels>
+                        <value>Payment approval</value>
+                        <language>EN</language>
+                    </labels>
+                </labels>
+                <isRepeatable>false</isRepeatable>
+                <maxRepetitions>0</maxRepetitions>
+                <joinType>OR</joinType>
+                <canCreateSubtasks>false</canCreateSubtasks>
+                <overrideSupervisors>false</overrideSupervisors>
+                <taskUser type="F">
+                    <userGroupFields>
+                        <userGroupFields code="payment_approval_group"/>
+                    </userGroupFields>
+                    <userFields/>
+                </taskUser>
+                <generateXDocTextLayer>false</generateXDocTextLayer>
+                <generateTifJpgImages>false</generateTifJpgImages>
+                <generateJsonTextLayer>false</generateJsonTextLayer>
+                <generateBinaryTextLayer>false</generateBinaryTextLayer>
+                <layoutInfoDto>
+                    <positionX>210</positionX>
+                    <positionY>500</positionY>
+                </layoutInfoDto>
+                <generatePngImages>false</generatePngImages>
+                <start>false</start>
+                <repeatable>false</repeatable>
+            </nodes>
+            <nodes>
+                <code>CONTROLLING</code>
+                <timeoutType>NONE</timeoutType>
+                <guard>
+                    javaclass:com.iriscorporate.irisnext.bls.servicesimpl.apsuite.workflow.scripts.APSuiteWorkflowNodeEntranceScript
+                </guard>
+                <type>FILL_FIELDS</type>
+                <descriptions>
+                    <descriptions>
+                        <language>FR</language>
+                    </descriptions>
+                    <descriptions>
+                        <language>EN</language>
+                    </descriptions>
+                </descriptions>
+                <routingRules>
+                    <conditions>
+                        <conditions arcName="approved">
+                            <groups>
+                                <groups>
+                                    <fields>
+                                        <fields>
+                                            <fieldName code="controlling_approved"/>
+                                            <values>
+                                                <values value="true"/>
+                                            </values>
+                                            <operator>0</operator>
+                                            <operand>eq</operand>
+                                        </fields>
+                                    </fields>
+                                    <operator>0</operator>
+                                </groups>
+                            </groups>
+                            <order>1</order>
+                        </conditions>
+                    </conditions>
+                    <elseStatement/>
+                </routingRules>
+                <notification>D</notification>
+                <waitForNextTask>true</waitForNextTask>
+                <autoAccept>true</autoAccept>
+                <routingType>RC</routingType>
+                <id>43</id>
+                <sdstype>FILL_FIELDS</sdstype>
+                <enterActions>
+                    <enterActions order="1" type="SA"
+                                  scriptFile="javaclass:com.iriscorporate.irisnext.bls.servicesimpl.apsuite.workflow.scripts.APSuiteLimitDateScript"/>
+                </enterActions>
+                <delay1 type="FIELD">
+                    <delay years="0" months="0" days="0" hours="0" minutes="0" seconds="0" milliseconds="0"/>
+                    <delayField code="controlling_limit1"/>
+                </delay1>
+                <overrideOperators>true</overrideOperators>
+                <delay2 type="FIELD">
+                    <delay years="0" months="0" days="0" hours="0" minutes="0" seconds="0" milliseconds="0"/>
+                    <delayField code="controlling_limit2"/>
+                </delay2>
+                <isStart>false</isStart>
+                <graph>4</graph>
+                <labels>
+                    <labels>
+                        <language>FR</language>
+                    </labels>
+                    <labels>
+                        <value>Controlling</value>
+                        <language>EN</language>
+                    </labels>
+                </labels>
+                <isRepeatable>false</isRepeatable>
+                <maxRepetitions>0</maxRepetitions>
+                <joinType>OR</joinType>
+                <canCreateSubtasks>false</canCreateSubtasks>
+                <overrideSupervisors>false</overrideSupervisors>
+                <taskUser type="F">
+                    <userGroupFields>
+                        <userGroupFields code="controlling_group"/>
+                    </userGroupFields>
+                    <userFields/>
+                </taskUser>
+                <generateXDocTextLayer>false</generateXDocTextLayer>
+                <generateTifJpgImages>false</generateTifJpgImages>
+                <generateJsonTextLayer>false</generateJsonTextLayer>
+                <generateBinaryTextLayer>false</generateBinaryTextLayer>
+                <layoutInfoDto>
+                    <positionX>210</positionX>
+                    <positionY>410</positionY>
+                </layoutInfoDto>
+                <generatePngImages>false</generatePngImages>
+                <start>false</start>
+                <repeatable>false</repeatable>
+            </nodes>
+            <nodes>
+                <code>DataIntegrity</code>
+                <timeoutType>NONE</timeoutType>
+                <type>DATA_INTEGRITY</type>
+                <descriptions>
+                    <descriptions>
+                        <language>EN</language>
+                    </descriptions>
+                    <descriptions>
+                        <language>FR</language>
+                    </descriptions>
+                </descriptions>
+                <waitForNextTask>false</waitForNextTask>
+                <autoAccept>false</autoAccept>
+                <routingType>DA</routingType>
+                <id>44</id>
+                <sdstype>DATA_INTEGRITY</sdstype>
+                <overrideOperators>false</overrideOperators>
+                <isStart>false</isStart>
+                <graph>4</graph>
+                <labels>
+                    <labels>
+                        <value>Send to the data integrity service</value>
+                        <language>EN</language>
+                    </labels>
+                    <labels>
+                        <language>FR</language>
+                    </labels>
+                </labels>
+                <isRepeatable>false</isRepeatable>
+                <maxRepetitions>0</maxRepetitions>
+                <joinType>OR</joinType>
+                <canCreateSubtasks>false</canCreateSubtasks>
+                <overrideSupervisors>false</overrideSupervisors>
+                <generateXDocTextLayer>false</generateXDocTextLayer>
+                <generateTifJpgImages>false</generateTifJpgImages>
+                <generateJsonTextLayer>false</generateJsonTextLayer>
+                <generateBinaryTextLayer>false</generateBinaryTextLayer>
+                <layoutInfoDto>
+                    <positionX>210</positionX>
+                    <positionY>680</positionY>
+                </layoutInfoDto>
+                <generatePngImages>false</generatePngImages>
+                <xServiceApplication>&lt;data>&lt;code>SPAP&lt;/code>&lt;/data></xServiceApplication>
+                <start>false</start>
+                <repeatable>false</repeatable>
+                <xserviceApplication>&lt;data>&lt;code>SPAP&lt;/code>&lt;/data></xserviceApplication>
+            </nodes>
+            <nodes>
+                <code>end0</code>
+                <timeoutType>NONE</timeoutType>
+                <type>END</type>
+                <descriptions>
+                    <descriptions>
+                        <language>FR</language>
+                    </descriptions>
+                    <descriptions>
+                        <language>EN</language>
+                    </descriptions>
+                </descriptions>
+                <waitForNextTask>false</waitForNextTask>
+                <autoAccept>false</autoAccept>
+                <routingType>DA</routingType>
+                <id>34</id>
+                <sdstype>END</sdstype>
+                <overrideOperators>false</overrideOperators>
+                <isStart>false</isStart>
+                <graph>4</graph>
+                <labels>
+                    <labels>
+                        <language>FR</language>
+                    </labels>
+                    <labels>
+                        <value>End 1</value>
+                        <language>EN</language>
+                    </labels>
+                </labels>
+                <isRepeatable>false</isRepeatable>
+                <maxRepetitions>0</maxRepetitions>
+                <joinType>OR</joinType>
+                <canCreateSubtasks>false</canCreateSubtasks>
+                <overrideSupervisors>false</overrideSupervisors>
+                <generateXDocTextLayer>false</generateXDocTextLayer>
+                <generateTifJpgImages>false</generateTifJpgImages>
+                <generateJsonTextLayer>false</generateJsonTextLayer>
+                <generateBinaryTextLayer>false</generateBinaryTextLayer>
+                <layoutInfoDto>
+                    <positionX>690</positionX>
+                    <positionY>430</positionY>
+                </layoutInfoDto>
+                <generatePngImages>false</generatePngImages>
+                <start>false</start>
+                <repeatable>false</repeatable>
+            </nodes>
+            <nodes>
+                <code>FINAL_ACCOUNTING_CHECK</code>
+                <timeoutType>NONE</timeoutType>
+                <guard>
+                    javaclass:com.iriscorporate.irisnext.bls.servicesimpl.apsuite.workflow.scripts.APSuiteWorkflowNodeEntranceScript
+                </guard>
+                <type>FILL_FIELDS</type>
+                <descriptions>
+                    <descriptions>
+                        <language>EN</language>
+                    </descriptions>
+                    <descriptions>
+                        <language>FR</language>
+                    </descriptions>
+                </descriptions>
+                <routingRules>
+                    <conditions>
+                        <conditions arcName="approved">
+                            <groups>
+                                <groups>
+                                    <fields>
+                                        <fields>
+                                            <fieldName code="final_accounting_check_approved"/>
+                                            <values>
+                                                <values value="true"/>
+                                            </values>
+                                            <operator>0</operator>
+                                            <operand>eq</operand>
+                                        </fields>
+                                    </fields>
+                                    <operator>0</operator>
+                                </groups>
+                            </groups>
+                            <order>1</order>
+                        </conditions>
+                    </conditions>
+                    <elseStatement/>
+                </routingRules>
+                <notification>D</notification>
+                <waitForNextTask>true</waitForNextTask>
+                <autoAccept>true</autoAccept>
+                <routingType>RC</routingType>
+                <id>38</id>
+                <sdstype>FILL_FIELDS</sdstype>
+                <enterActions>
+                    <enterActions order="1" type="SA"
+                                  scriptFile="javaclass:com.iriscorporate.irisnext.bls.servicesimpl.apsuite.workflow.scripts.APSuiteLimitDateScript"/>
+                </enterActions>
+                <delay1 type="FIELD">
+                    <delay years="0" months="0" days="0" hours="0" minutes="0" seconds="0" milliseconds="0"/>
+                    <delayField code="final_accounting_check_limit1"/>
+                </delay1>
+                <overrideOperators>true</overrideOperators>
+                <delay2 type="FIELD">
+                    <delay years="0" months="0" days="0" hours="0" minutes="0" seconds="0" milliseconds="0"/>
+                    <delayField code="final_accounting_check_limit2"/>
+                </delay2>
+                <isStart>false</isStart>
+                <graph>4</graph>
+                <labels>
+                    <labels>
+                        <value>Final accounting check</value>
+                        <language>EN</language>
+                    </labels>
+                    <labels>
+                        <language>FR</language>
+                    </labels>
+                </labels>
+                <isRepeatable>false</isRepeatable>
+                <maxRepetitions>0</maxRepetitions>
+                <joinType>OR</joinType>
+                <canCreateSubtasks>false</canCreateSubtasks>
+                <overrideSupervisors>false</overrideSupervisors>
+                <taskUser type="F">
+                    <userGroupFields>
+                        <userGroupFields code="final_accounting_check_group"/>
+                    </userGroupFields>
+                    <userFields/>
+                </taskUser>
+                <generateXDocTextLayer>false</generateXDocTextLayer>
+                <generateTifJpgImages>false</generateTifJpgImages>
+                <generateJsonTextLayer>false</generateJsonTextLayer>
+                <generateBinaryTextLayer>false</generateBinaryTextLayer>
+                <layoutInfoDto>
+                    <positionX>210</positionX>
+                    <positionY>590</positionY>
+                </layoutInfoDto>
+                <generatePngImages>false</generatePngImages>
+                <start>false</start>
+                <repeatable>false</repeatable>
+            </nodes>
+        </nodes>
+        <operatorGroups>
+            <operatorGroups>ADMIN</operatorGroups>
+            <operatorGroups>__APSUITE__DEFAULT__GROUP__</operatorGroups>
+        </operatorGroups>
+        <operators>
+            <operators>ADMIN</operators>
+            <operators>__APSUITE__DEFAULT__GROUP__</operators>
+        </operators>
+        <objectMandatory>false</objectMandatory>
+        <saveEventLog>false</saveEventLog>
+        <id>4</id>
+        <state>Active</state>
+        <objectTypes>
+            <objectTypes>SIB_BATCH</objectTypes>
+        </objectTypes>
+        <supervisors>
+            <supervisors>ADMIN</supervisors>
+            <supervisors>__APSUITE__DEFAULT__GROUP__</supervisors>
+        </supervisors>
+        <wfGraphNodeArcs>
+            <wfGraphNodeArcs>
+                <startNode>DataExtraction</startNode>
+                <id>41</id>
+                <endNode>DataExtraction</endNode>
+            </wfGraphNodeArcs>
+            <wfGraphNodeArcs>
+                <startNode>APPROVAL1</startNode>
+                <id>36</id>
+                <endNode>APPROVAL1</endNode>
+            </wfGraphNodeArcs>
+            <wfGraphNodeArcs>
+                <startNode>DocumentPreparation</startNode>
+                <id>39</id>
+                <endNode>DocumentPreparation</endNode>
+            </wfGraphNodeArcs>
+            <wfGraphNodeArcs>
+                <startNode>APPROVAL2</startNode>
+                <id>35</id>
+                <endNode>APPROVAL2</endNode>
+            </wfGraphNodeArcs>
+            <wfGraphNodeArcs>
+                <startNode>VERIFICATION</startNode>
+                <id>37</id>
+                <endNode>VERIFICATION</endNode>
+            </wfGraphNodeArcs>
+            <wfGraphNodeArcs>
+                <startNode>end1</startNode>
+                <id>40</id>
+                <endNode>end1</endNode>
+            </wfGraphNodeArcs>
+            <wfGraphNodeArcs>
+                <startNode>PAYMENT_APPROVAL</startNode>
+                <id>42</id>
+                <endNode>PAYMENT_APPROVAL</endNode>
+            </wfGraphNodeArcs>
+            <wfGraphNodeArcs>
+                <startNode>CONTROLLING</startNode>
+                <id>43</id>
+                <endNode>CONTROLLING</endNode>
+            </wfGraphNodeArcs>
+            <wfGraphNodeArcs>
+                <startNode>DataIntegrity</startNode>
+                <id>44</id>
+                <endNode>DataIntegrity</endNode>
+            </wfGraphNodeArcs>
+            <wfGraphNodeArcs>
+                <startNode>end0</startNode>
+                <id>34</id>
+                <endNode>end0</endNode>
+            </wfGraphNodeArcs>
+            <wfGraphNodeArcs>
+                <startNode>FINAL_ACCOUNTING_CHECK</startNode>
+                <id>38</id>
+                <endNode>FINAL_ACCOUNTING_CHECK</endNode>
+            </wfGraphNodeArcs>
+        </wfGraphNodeArcs>
+    </item>
+</List>

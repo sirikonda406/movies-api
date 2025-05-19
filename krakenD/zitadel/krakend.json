@@ -1,20 +1,41 @@
 {
+  "$schema": "https://www.krakend.io/schema/v3.json",
   "version": 3,
-  "name": "KrakenD on k8s",
-  "port": 8080,
+  "name": "API Gateway",
   "cache_ttl": "3600s",
   "timeout": "60s",
+  "log_level": "TRACE",
+  "debug_endpoint": true,
   "extra_config": {
-    "telemetry/logging": {
-      "level": "DEBUG"
+    "security/cors": {
+      "allow_origins": [
+        "*"
+      ],
+      "allow_methods": [
+        "GET",
+        "HEAD",
+        "POST"
+      ],
+      "expose_headers": [
+        "Content-Length",
+        "Content-Type",
+        "Authorization"
+      ],
+      "allow_headers": [
+        "Origin",
+        "Content-Type",
+        "Accept-Language",
+        "Authorization"
+      ],
+      "max_age": "12h",
+      "allow_credentials": true,
+      "debug": true
     }
   },
-  "host": [
-    "http://movies:8080"
-  ],
   "endpoints": [
     {
       "endpoint": "/debug",
+      "cache_ttl": "1s",
       "backend": [
         {
           "host": [
@@ -26,6 +47,7 @@
     },
     {
       "endpoint": "/movies",
+      "cache_ttl": "1s",
       "backend": [
         {
           "host": [
@@ -37,28 +59,6 @@
               "response_type": "string"
             }
           }
-        }
-      ]
-    },
-    {
-      "endpoint": "/hello",
-      "backend": [
-        {
-          "host": [
-            "http://movies:8080"
-          ],
-          "url_pattern": "/hello"
-        }
-      ]
-    },
-    {
-      "endpoint": "/test",
-      "backend": [
-        {
-          "host": [
-            "http://movies:8080"
-          ],
-          "url_pattern": "/test"
         }
       ]
     }

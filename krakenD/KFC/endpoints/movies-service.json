@@ -1,0 +1,22 @@
+{
+  "endpoint": "/test",
+  "method": "GET",
+  "cache_ttl": "1s",
+  "input_headers": ["*"],
+  "extra_config": {
+    "auth/validator":{
+      "alg": "RS256",
+      "jwk_url": "http://keycloak:8180/auth/realms/pulse/protocol/openid-connect/certs",
+      "disable_jwk_security": true,
+      "operation_debug": true
+    }
+  },
+  "backend": [
+    {
+      "host": [
+        "http://movies:8080"
+      ],
+      "url_pattern": "/test"
+    }
+  ]
+}

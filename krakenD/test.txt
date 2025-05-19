@@ -1,0 +1,1 @@
+localhost:8180/auth/realms/pulse/protocol/openid-connect/auth?client_id=krakend&redirect_uri=http://localhost:8080/home/&state=88550164-d2f0-4f9e-9da1-0949ab3127cc&response_mode=fragment&response_type=code&scope=openid&nonce=94756989-b628-431d-85a5-c21681a650ee&code_challenge=J-uCsdW09WBgx1Ea172qbEB9x9t338enPIq9LwpZX4E&code_challenge_method=S256

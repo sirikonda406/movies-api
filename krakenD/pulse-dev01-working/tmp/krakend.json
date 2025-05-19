@@ -1,0 +1,92 @@
+{
+  "$schema": "https://www.krakend.io/schema/v3.json",
+  "version": 3,
+  "name": "IRIS Pulse API Gateway",
+  "port": 8080,
+  "timeout": "3s",
+  "cache_ttl":  "3s",
+  "debug_endpoint": true,
+  "output_encoding": "json",
+  "extra_config": {
+    "security/cors": {
+      "allow_origins": [
+        "*"
+      ],
+      "allow_methods": [
+        "GET",
+        "HEAD",
+        "POST"
+      ],
+      "expose_headers": [
+        "Content-Length",
+        "Content-Type",
+        "Authorization"
+      ],
+      "allow_headers": [
+        "Origin",
+        "Content-Type",
+        "Accept-Language",
+        "Authorization"
+      ],
+      "max_age": "12h",
+      "allow_credentials": true,
+      "debug": true
+    }
+
+  }
+,
+  "endpoints": [{
+    "endpoint": "/graphs",
+    "method": "GET",
+    "cache_ttl": "1s",
+    "input_headers": ["*"],
+    "extra_config": {
+      "auth/validator":{
+        "alg": "RS256",
+        "jwk_url": "https://keycloak/auth/realms/irispulse/protocol/openid-connect/certs",
+        "disable_jwk_security": true,
+        "operation_debug": true
+      }
+    },
+    "backend": [
+      {
+        "host": ["http://workflowgraph:8080"],
+        "url_pattern": "/workflow/681cb7acfd4e9602e71ff364/graphs"
+      }
+    ]
+  },
+    {
+      "endpoint": "/graphList",
+      "method": "GET",
+      "cache_ttl": "1s",
+      "input_headers": ["*"],
+      "extra_config": {
+        "auth/validator":{
+          "alg": "RS256",
+          "jwk_url": "https://keycloak/auth/realms/irispulse/protocol/openid-connect/certs",
+          "disable_jwk_security": true,
+          "operation_debug": true
+        }
+      },
+      "backend": [
+        {
+          "host": ["http://workflowgraph:8080"],
+          "url_pattern": "/workflow/681cb7acfd4e9602e71ff364/graphs"
+        }
+      ]
+    }
+  ,
+    {
+      "endpoint": "/debug",
+      "cache_ttl": "1s",
+      "backend": [
+        {
+          "host": [
+            "http://pulse-api-gateway:8000"
+          ],
+          "url_pattern": "/__debug/debug"
+        }
+      ]
+    }
+  ]
+}

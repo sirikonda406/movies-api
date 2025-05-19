@@ -1,0 +1,15 @@
+{
+  "$schema": "https://www.krakend.io/schema/v3.json",
+  "version": 3,
+  "name": "{{ env "IRIS Pulse API Gateway" }} ({{ .service.environment }})",
+  "port": {{ .service.port }},
+  "timeout": "{{ .service.timeout }}",
+  "cache_ttl":  "{{ .service.cache_ttl }}",
+  "output_encoding": "{{ .service.output_encoding }}",
+  "extra_config": {
+      {{ template "extra-config.json" . }}
+    },
+  "endpoints": [
+     {{ template "endpoints.json" . }}
+  ]
+}

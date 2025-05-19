@@ -1,0 +1,19 @@
+{
+   "endpoint": "/hello",
+  {{  include "input_headers.tmpl"}},
+   "backend": [
+   {
+     "url_pattern": "/users",
+     "extra_config": {
+       {{ include "rate_limit_backend.tmpl"}}
+     },
+     "host": ["localhost:8080"]
+   }
+   ],
+   "extra_config": {
+     "auth/validator": {
+       "alg": "RS256",
+       "jwk_url": "{{ .env.security }}"
+     }
+   }
+ }

@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface IMoviesService {
 
-    List<MovieDto> rtrvMovies();
+    MovieDto rtrvMovies(String movieId);
 }

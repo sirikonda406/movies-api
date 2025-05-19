@@ -69,6 +69,34 @@ data:
           ]
         },
         {
+          "endpoint": "/movies/{id}",
+          "method": "GET",
+          "cache_ttl": "1s",
+          "headers_to_pass": ["*"],
+          "input_headers": ["*"],
+          "extra_config": {
+            "headers_to_pass":["*"],
+            "auth/validator":{
+              "alg": "RS256",
+              "jwk_url": "http://keycloak:8180/auth/realms/pulse/protocol/openid-connect/certs",
+              "disable_jwk_security": true,
+              "operation_debug": true
+            }
+          },
+          "backend": [
+            {
+              "host": [
+                "http://movies:8080"
+              ],
+              "extra_config": {
+                "headers_to_pass":["*"]
+              },
+              "url_pattern": "/movies/{id}"
+            }
+          ]
+        
+        },
+        {
           "endpoint": "/hello",
           "method": "GET",
           "cache_ttl": "1s",
